@@ -184,6 +184,18 @@ namespace alpr
     return arraySize % 2 ? array[arraySize / 2] : (array[arraySize / 2 - 1] + array[arraySize / 2]) / 2;
   }
 
+  double calcKthStatistics(int array[], int arraySize, int k)
+  {
+	  if (arraySize == 0)
+	  {
+		  //std::cerr << "Median calculation requested on empty array" << endl;
+		  return 0;
+	  }
+
+	  std::sort(&array[0], &array[arraySize]);
+	  return array[k];
+  }
+
   Mat equalizeBrightness(Mat img)
   {
     // Divide the image by its morphologically closed counterpart

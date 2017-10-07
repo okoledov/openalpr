@@ -75,6 +75,7 @@ namespace alpr
   };
 
   double median(int array[], int arraySize);
+  double calcKthStatistics(int array[], int arraySize, int k);
 
   std::vector<cv::Mat> produceThresholds(const cv::Mat img_gray, Config* config);
 

@@ -304,7 +304,7 @@ namespace alpr
     vector<int> charheights;
     for (unsigned int i = 0; i < charPoints.size(); i++)
       charheights.push_back(charPoints[i].boundingBox.height);
-    float medianCharHeight = median(charheights.data(), charheights.size());
+    float medianCharHeight = calcKthStatistics(charheights.data(), charheights.size(), charheights.size() * 3 / 4);
 
 
 
