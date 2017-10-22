@@ -136,7 +136,7 @@ namespace alpr
       // Each cluster is the same plate, just analyzed from a slightly different 
       // perspective.  Merge them together and score them as if they are one
 
-      const float MIN_CONFIDENCE = 75;
+      const float MIN_CONFIDENCE = 60;
       
 
       // Factor in the position of the plate in the topN list, the confidence, and the template match status
