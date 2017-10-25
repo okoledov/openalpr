@@ -95,6 +95,12 @@ namespace alpr
     impl->setCountry(country);
   }
 
+
+  void Alpr::setDebugMode(bool isDebugMode)
+  {
+	  getConfig()->setDebug(isDebugMode);
+  }
+
   void Alpr::setPrewarp(std::string prewarp_config) {
     impl->setPrewarp(prewarp_config);
   }
